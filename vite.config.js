@@ -26,7 +26,7 @@ export default defineConfig({
       ]
     })
   ],
-  base: process.env.VITE_PUBLIC_PATH,
+  base: process.env.NODE_ENV == 'production'?'/web/':'',
   resolve: {
     alias: {
       '@': resolve(__dirname,'src')
