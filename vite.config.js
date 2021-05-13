@@ -38,7 +38,7 @@ export default defineConfig({
       [settings.envContext]: {
         target: 'http://localhost:3001',
         changeOrigin: true,
-        rewrite: (path) => path.replace(new RegExp(settings.envContext,'g'),'')
+        rewrite: (path) => path.replace(new RegExp(settings.envContext,'g'),settings.envContext)
       }
     }
   }
