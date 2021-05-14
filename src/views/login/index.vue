@@ -5,16 +5,21 @@
 </template>
 
 <script setup>
-  import axios from 'axios'
+  import {login} from '@/api/user'
   import {useRouter} from 'vue-router'
   const router = useRouter()
   const toHome = () => {
-    console.log(123);
-    axios.get('http://localhost:3001/api/login',{
+    // axios.get('http://localhost:3001/api/login',{
+    //   username: 'admin',
+    //   password: '123456'
+    // }).then(res => {
+    //   console.log(res);
+    // })
+    login({
       username: 'admin',
       password: '123456'
     }).then(res => {
-      console.log(res);
+      console.log('res',res);
     })
   }
 </script>
