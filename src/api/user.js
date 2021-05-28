@@ -8,3 +8,10 @@ export function login(data) {
     params: data
   })
 }
+
+export function getUserInfo() {
+  return http({
+    url: getApi('userInfo'),
+    method: 'get'
+  })
+}

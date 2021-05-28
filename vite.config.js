@@ -29,7 +29,7 @@ export default ({mode}) => {
     base: loadEnv(mode, process.cwd()).VITE_PUBLIC_PATH,
     resolve: {
       alias: {
-        '@': resolve(__dirname, 'src')
+        '@': resolve(__dirname, './src')
       },
     },
     server: {

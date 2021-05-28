@@ -1,4 +1,5 @@
 import {createRouter,createWebHashHistory} from 'vue-router'
+import Layout from '@/layout/index.vue'
 import { getToken } from "@/utils/storage/cookie";
 import NProgress from "@/utils/progress";
 const router = createRouter({
@@ -15,10 +16,31 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
+      component: Layout,
+      redirect: '/welcome',
       meta: {
         title: 'home'
       },
-      component:() => import('@/views/home/index.vue')
+      children: [{
+        path: '/welcome',
+        name: 'welcome',
+        component:() => import('@/views/home/index.vue')
+      }]
+    },
+
+    {
+      path: '/list',
+      name: 'list',
+      component: Layout,
+      redirect: '/test',
+      meta: {
+        title: 'home'
+      },
+      children: [{
+        path: '/test',
+        name: 'test',
+        component:() => import('@/views/list/index.vue')
+      }]
     },
     {
       path: '/404',
