@@ -10,7 +10,7 @@
       </template>
       <template v-slot>
         <div>
-          <el-button type="primary">default</el-button>
+          <el-button type="primary" @click="showConfirm">default</el-button>
         </div>
       </template>
     </table-page>
@@ -19,15 +19,19 @@
 </template>
 
 <script>
+import {getCurrentInstance} from "vue";
 import {removeToken} from "@/utils/storage/cookie";
 import {storageSession} from "@/utils/storage";
 import {useRouter} from 'vue-router'
 import TablePage from '@/components/table/TablePage.vue'
+import {ElMessage} from "element-plus";
 export default {
   components: {
     TablePage
   },
   setup() {
+    console.log('getCurrentInstance',getCurrentInstance())
+    const {ctx} = getCurrentInstance()
     const router = useRouter()
     /**
      * 登出接口
@@ -51,12 +55,25 @@ export default {
         name: 'list'
       })
     }
+    const showConfirm = () => {
+      ctx.$confirm('是傻逼吗',{
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        callback: action => {
+          ctx.$message({
+            type: 'info',
+            message: `action: ${ action }`
+          });
+        }
+      })
+    }
     return {
       router,
       logout,
       handleChange,
       handleTableChange,
-      toList
+      toList,
+      showConfirm
     }
   }
 }

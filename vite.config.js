@@ -8,6 +8,23 @@ import settings from './src/settings'
  */
 export default ({mode}) => {
   return defineConfig({
+    base: loadEnv(mode, process.cwd()).VITE_PUBLIC_PATH,
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, './src')
+      },
+    },
+    server: {
+      https: false,
+      open: true,
+      proxy: {
+        [settings.envContext]: {
+          target: 'http://localhost:3001',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(new RegExp(settings.envContext, 'g'), settings.envContext)
+        }
+      }
+    },
     plugins: [
       vue(),
       styleImport({
@@ -26,21 +43,5 @@ export default ({mode}) => {
         ]
       })
     ],
-    base: loadEnv(mode, process.cwd()).VITE_PUBLIC_PATH,
-    resolve: {
-      alias: {
-        '@': resolve(__dirname, './src')
-      },
-    },
-    server: {
-      https: false,
-      proxy: {
-        [settings.envContext]: {
-          target: 'http://localhost:3001',
-          changeOrigin: true,
-          rewrite: (path) => path.replace(new RegExp(settings.envContext, 'g'), settings.envContext)
-        }
-      }
-    }
   })
 }
