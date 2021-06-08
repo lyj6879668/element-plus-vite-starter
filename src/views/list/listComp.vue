@@ -18,14 +18,10 @@ export default {
     const isChange = ref(false)
     const changeTime = ref('')
     const {ctx} = getCurrentInstance()
-    watchEffect(() => {
-      // console.log('change',isChange.value)
-    })
     watch(() => _.cloneDeep(item),(item,prevItem) => {
       console.log(item.value.name,prevItem.value.name)
       isChange.value = true
       changeTime.value = ctx.$D().format('YYYY-MM-DD HH:mm:ss')
-      console.log(changeTime)
     },{deep: true})
     return {
       isChange,

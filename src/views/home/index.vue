@@ -2,7 +2,7 @@
   <div>
 	HOME
     <el-button type="primary" @click="logout">logout</el-button>
-    <table-page @change="handleChange" @table-change="handleTableChange">
+    <table-page req-url="getList" req-method="get" @change="handleChange" @table-change="handleTableChange">
       <template v-slot:header>
         <div>
           <el-button type="primary" size="mini" @click="toList">header</el-button>

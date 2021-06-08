@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bf3036d-c708-4bdb-b065-754d006d9190" name="Default" comment="Add 新增dayjs">
+    <list default="true" id="2bf3036d-c708-4bdb-b065-754d006d9190" name="Default" comment="Change 提交代码">
+      <change afterPath="$PROJECT_DIR$/src/api/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/404.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/404.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/apiList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/apiList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/table/TablePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/TablePage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/login/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/list/listComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/list/listComp.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,7 +288,7 @@
       <workItem from="1622182867341" duration="7207000" />
       <workItem from="1622617418424" duration="4962000" />
       <workItem from="1622687965340" duration="2336000" />
-      <workItem from="1623118820590" duration="1347000" />
+      <workItem from="1623118820590" duration="6833000" />
     </task>
     <task id="LOCAL-00001" summary="Add 引入vuex、vue-router、axios&#10;Change element+改成按需引入">
       <created>1620896516358</created>
@@ -324,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622192688386</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Change 提交代码">
+      <created>1623120315248</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1623120315248</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -373,7 +381,8 @@
     <MESSAGE value="Change 修改打包加载文件路径" />
     <MESSAGE value="Add 新增cookie、storage、axios，封装http请求" />
     <MESSAGE value="Add 新增dayjs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add 新增dayjs" />
+    <MESSAGE value="Change 提交代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change 提交代码" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
