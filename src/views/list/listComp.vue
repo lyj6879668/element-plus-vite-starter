@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{item.name}} <span v-if="isChange">{{changeTime}}</span></p>
+    <p @click="emitChange">{{item.name}} <span v-if="isChange">{{changeTime}}</span></p>
   </div>
 </template>
 
@@ -13,19 +13,24 @@ export default {
       type: Object
     }
   },
-  setup(props) {
+  // emits: ['emitChange'],
+  setup(props,{emit}) {
     const {item} = toRefs(props)
     const isChange = ref(false)
     const changeTime = ref('')
     const {ctx} = getCurrentInstance()
     watch(() => _.cloneDeep(item),(item,prevItem) => {
-      console.log(item.value.name,prevItem.value.name)
+      console.log(item.value,prevItem.value)
       isChange.value = true
       changeTime.value = ctx.$D().format('YYYY-MM-DD HH:mm:ss')
     },{deep: true})
+    const emitChange = () => {
+      emit('emitChange',item.value.id)
+    }
     return {
       isChange,
-      changeTime
+      changeTime,
+      emitChange
     }
   }
 }

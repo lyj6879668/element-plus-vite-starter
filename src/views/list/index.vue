@@ -1,18 +1,20 @@
 <template>
   <div class="list">
-      <list-comp v-for="(item,index) in list" :key="item.id" :item="item" @click="changeName(index)"></list-comp>
+      <list-comp v-for="(item,index) in list" :key="item.id" :item="item" @click="changeName(index)" @emitChange="handleChange"></list-comp>
   </div>
 </template>
 
 <script>
 import {reactive,onMounted} from 'vue'
 import listComp from './listComp.vue'
+import mixin from './mixin.js'
 export default {
   components: {
     listComp
   },
   setup() {
     const list = reactive([])
+    const {count} = mixin()
     const getList = () => {
       for(let i = 0;i< 50;i++) {
         list.push({
@@ -29,12 +31,17 @@ export default {
     const changeName = (index) => {
       list[index].name = 'this is new name'
     }
+    const handleChange = (id) => {
+      console.log('id',id)
+    }
     onMounted(() => {
     })
     return {
       list,
       getList,
-      changeName
+      changeName,
+      handleChange,
+      count
     }
   }
 }
