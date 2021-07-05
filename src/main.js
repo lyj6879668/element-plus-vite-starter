@@ -7,6 +7,7 @@ import './style/index.less'
 
 // plugin
 import D from 'dayjs'
+import _ from 'lodash'
 
 import { useElementPlus } from "../src/plugins/element-plus";
 
@@ -17,3 +18,4 @@ app.config.globalProperties.$ELEMENT = {
   size: 'mini'
 }
 app.config.globalProperties.$D = D
+app.config.globalProperties._ = _

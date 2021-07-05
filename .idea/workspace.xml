@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bf3036d-c708-4bdb-b065-754d006d9190" name="Default" comment="Change 提交代码">
-      <change afterPath="$PROJECT_DIR$/src/api/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/apiList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/apiList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table/TablePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/TablePage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/list/listComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/list/listComp.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -289,6 +286,8 @@
       <workItem from="1622617418424" duration="4962000" />
       <workItem from="1622687965340" duration="2336000" />
       <workItem from="1623118820590" duration="6833000" />
+      <workItem from="1625208665604" duration="324000" />
+      <workItem from="1625450820617" duration="1560000" />
     </task>
     <task id="LOCAL-00001" summary="Add 引入vuex、vue-router、axios&#10;Change element+改成按需引入">
       <created>1620896516358</created>

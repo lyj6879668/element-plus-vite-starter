@@ -6,7 +6,6 @@
 
 <script>
 import {watch,ref,toRefs,watchEffect,getCurrentInstance} from "vue";
-import _ from 'lodash'
 export default {
   props: {
     item: {
@@ -19,7 +18,7 @@ export default {
     const isChange = ref(false)
     const changeTime = ref('')
     const {ctx} = getCurrentInstance()
-    watch(() => _.cloneDeep(item),(item,prevItem) => {
+    watch(() => this._.cloneDeep(item),(item,prevItem) => {
       console.log(item.value,prevItem.value)
       isChange.value = true
       changeTime.value = ctx.$D().format('YYYY-MM-DD HH:mm:ss')
