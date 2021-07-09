@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build:pro": "vite build --mode production",
+    "build:dev": "vite build --mode development"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -17,6 +18,7 @@
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "@types/node": "^16.3.0",
     "@vitejs/plugin-vue": "^1.0.4",
     "@vue/compiler-sfc": "^3.0.5",
     "less": "^4.1.1",
