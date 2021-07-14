@@ -17,11 +17,11 @@ export default {
     const {item} = toRefs(props)
     const isChange = ref(false)
     const changeTime = ref('')
-    const {ctx} = getCurrentInstance()
-    watch(() => this._.cloneDeep(item),(item,prevItem) => {
+    const {proxy} = getCurrentInstance()
+    watch(() => item,(item,prevItem) => {
       console.log(item.value,prevItem.value)
       isChange.value = true
-      changeTime.value = ctx.$D().format('YYYY-MM-DD HH:mm:ss')
+      changeTime.value = proxy.$D().format('YYYY-MM-DD HH:mm:ss')
     },{deep: true})
     const emitChange = () => {
       emit('emitChange',item.value.id)

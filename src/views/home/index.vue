@@ -31,7 +31,7 @@ export default {
   },
   setup() {
     console.log('getCurrentInstance',getCurrentInstance())
-    const {ctx} = getCurrentInstance()
+    const {ctx,proxy } = getCurrentInstance()
     const router = useRouter()
     /**
      * 登出接口
@@ -56,11 +56,13 @@ export default {
       })
     }
     const showConfirm = () => {
-      ctx.$confirm('是傻逼吗',{
+      console.log(proxy.$D().format())
+      // console.log(proxy._.cloneDeep({aa:'123'}))
+      proxy.$confirm('是傻逼吗',{
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         callback: action => {
-          ctx.$message({
+          proxy.$message({
             type: 'info',
             message: `action: ${ action }`
           });
