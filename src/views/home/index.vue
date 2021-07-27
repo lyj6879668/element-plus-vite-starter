@@ -24,12 +24,12 @@ import {removeToken} from "@/utils/storage/cookie";
 import {storageSession} from "@/utils/storage";
 import {useRouter} from 'vue-router'
 import TablePage from '@/components/table/TablePage.vue'
-import {ElMessage} from "element-plus";
 export default {
   components: {
     TablePage
   },
   setup() {
+    console.log(ctx)
     console.log('getCurrentInstance',getCurrentInstance())
     const {ctx,proxy } = getCurrentInstance()
     const router = useRouter()
@@ -42,6 +42,12 @@ export default {
       router.push({
         name: 'login'
       })
+    }
+    let list = ['a','b','c','d','e']
+    for(let item of list) {
+      if(item == 'd') {
+        return
+      }
     }
     // table操作
     const handleChange = () => {

@@ -25,6 +25,7 @@ export default {
     },{deep: true})
     const emitChange = () => {
       emit('emitChange',item.value.id)
+      proxy.emitter('get-emit',true)
     }
     return {
       isChange,

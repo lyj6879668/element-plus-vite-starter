@@ -9,6 +9,9 @@ import settings from './src/settings'
 export default ({mode}) => {
   return defineConfig({
     base: loadEnv(mode, process.cwd()).VITE_PUBLIC_PATH,
+    build: {
+      sourcemap: true
+    },
     resolve: {
       alias: {
         '@': resolve(__dirname, './src')

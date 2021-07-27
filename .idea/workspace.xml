@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bf3036d-c708-4bdb-b065-754d006d9190" name="Default" comment="Change 提交代码">
-      <change afterPath="$PROJECT_DIR$/src/components/lib/plugin/Index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/error/error.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/error/vueError.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/list/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/list/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/list/listComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/list/listComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,6 +204,7 @@
       <recent name="F:\project\personal\vite-demo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\project\personal\vite-demo\src\utils\error" />
       <recent name="F:\project\personal\vite-demo\src\components\lib\plugin" />
     </key>
   </component>
@@ -296,7 +299,11 @@
       <workItem from="1623118820590" duration="6833000" />
       <workItem from="1625208665604" duration="324000" />
       <workItem from="1625450820617" duration="1560000" />
-      <workItem from="1626231772445" duration="2426000" />
+      <workItem from="1626231772445" duration="3046000" />
+      <workItem from="1626762821723" duration="2072000" />
+      <workItem from="1626833084894" duration="1597000" />
+      <workItem from="1626859102814" duration="1126000" />
+      <workItem from="1627348697458" duration="7018000" />
     </task>
     <task id="LOCAL-00001" summary="Add 引入vuex、vue-router、axios&#10;Change element+改成按需引入">
       <created>1620896516358</created>
@@ -340,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623120315248</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Change 提交代码">
+      <created>1626240826013</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1626240826013</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -383,15 +397,38 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add 引入vuex、vue-router、axios&#10;Change element+改成按需引入" />
     <MESSAGE value="Change 调试axios" />
     <MESSAGE value="Change 修改打包加载文件路径" />
     <MESSAGE value="Add 新增cookie、storage、axios，封装http请求" />
     <MESSAGE value="Add 新增dayjs" />
-    <MESSAGE value="Change 提交代码" />
     <MESSAGE value="Change 添加typescript" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change 添加typescript" />
+    <MESSAGE value="Change 提交代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change 提交代码" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

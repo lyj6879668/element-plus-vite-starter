@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import {reactive,onMounted} from 'vue'
+import {reactive,onMounted,getCurrentInstance} from 'vue'
 import listComp from './listComp.vue'
 import mixin from './mixin.js'
 export default {
@@ -13,6 +13,10 @@ export default {
     listComp
   },
   setup() {
+    const {proxy} = getCurrentInstance()
+    proxy.emitter.on('get-emit',(type) => {
+      console.log('type',type)
+    })
     const list = reactive([])
     const {count} = mixin()
     const getList = () => {
